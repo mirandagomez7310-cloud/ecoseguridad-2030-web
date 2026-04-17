@@ -434,14 +434,14 @@ export async function generateProjectPDF() {
     startY: y,
     head: [["Componente", "Especificación", "Proveedor ref.", "Costo unitario"]],
     body: [
-      ["Guante HPPE calibre 13 (par)", "Tejido de punto + recub. nitrilo rugoso", "Safety Pro MX / Lutexpo", "$180 MXN"],
-      ["Imanes neodimio N52 D25×5mm (x4)", "Grado N52, 14,800 gauss, con adhesivo epoxi", "MagnetMX / MercadoLibre", "$90 MXN"],
-      ["Costura integración imanes", "Mano de obra taller textil local (por par)", "Taller local", "$50 MXN"],
-      ["Bastón detector portátil", "Sensor inductivo + pantalla LCD + pilas", "TechField Mx / AliExpress", "$280 MXN"],
-      ["Empaque + instructivo impreso", "Caja kraft + folleto A5 4 colores", "PackMex", "$60 MXN"],
-      ["Control de calidad / pruebas", "Inspección magnética + funcional", "Interno", "$20 MXN"],
+      ["Guante HPPE calibre 13 (par)", "Tejido de punto + recub. nitrilo rugoso", "Safety Pro MX / compra en volumen", "$70 MXN"],
+      ["Imanes neodimio N52 D25×5mm (x4)", "Grado N52, 14,800 gauss, con adhesivo epoxi", "AliExpress / MagnetMX directo", "$45 MXN"],
+      ["Costura integración imanes", "Mano de obra taller textil local (por par)", "Taller local", "$25 MXN"],
+      ["Bastón detector básico portátil", "Sensor inductivo + pantalla LCD + pilas", "TechField Mx / AliExpress", "$35 MXN"],
+      ["Empaque + instructivo impreso", "Caja kraft + folleto A5 2 colores", "PackMex", "$15 MXN"],
+      ["Control de calidad / pruebas", "Inspección magnética + funcional", "Interno", "$5 MXN"],
     ],
-    foot: [["", "", "TOTAL KIT MAGNETOREC", "$300 MXN"]],
+    foot: [["", "", "TOTAL COSTO KIT MAGNETOREC", "$195 MXN"]],
     styles: { fontSize: 7.5, cellPadding: 3.5, font: "helvetica", textColor: [200,200,200], fillColor: [10,10,10] },
     headStyles: { fillColor: [232,93,4], textColor: [255,255,255], fontStyle: "bold", fontSize: 7.5 },
     footStyles: { fillColor: [232,93,4,0.15], textColor: [232,93,4], fontStyle: "bold", fontSize: 8 },
@@ -453,13 +453,13 @@ export async function generateProjectPDF() {
 
   // Horizontal bar chart — cost breakdown
   drawHBarChart(14, y, 88, 62, [
-    { label: "Guante HPPE", value: 180, color: [39,174,96] },
-    { label: "Bastón detector", value: 280, color: [59,130,246] },
-    { label: "Imanes N52", value: 90, color: ORANGE },
-    { label: "Integración", value: 50, color: [155,89,182] },
-    { label: "Empaque", value: 60, color: [80,80,80] },
-    { label: "QC / Pruebas", value: 20, color: [40,40,40] },
-  ], 300, "Distribución de costos por kit (MXN)");
+    { label: "Guante HPPE", value: 70, color: [39,174,96] },
+    { label: "Bastón detector", value: 35, color: [59,130,246] },
+    { label: "Imanes N52", value: 45, color: ORANGE },
+    { label: "Integración", value: 25, color: [155,89,182] },
+    { label: "Empaque", value: 15, color: [80,80,80] },
+    { label: "QC / Pruebas", value: 5, color: [40,40,40] },
+  ], 100, "Distribución de costos por kit (MXN)");
 
   // Vertical bar chart — projection
   const projData = [
@@ -496,14 +496,14 @@ export async function generateProjectPDF() {
     startY: y,
     head: [["Concepto", "Detalle", "Monto MXN"]],
     body: [
-      ["Producción inicial (35 kits)", "35 guantes + 35 bastones + integración", "$23,800"],
-      ["Diseño, branding e instructivos", "Naming, packaging, folleto A5", "$4,500"],
+      ["Producción inicial (35 kits)", "35 guantes + 35 bastones + integración", "$6,825"],
+      ["Diseño, branding e instructivos", "Naming, packaging, folleto A5", "$3,500"],
       ["Registro de marca IMPI", "Solicitud de marca mixta, clase 9 y 25", "$3,200"],
-      ["Taller integración imanes", "Mano de obra costura especializada", "$1,750"],
-      ["Logística y distribución piloto", "Envíos, combustible, campo", "$2,550"],
-      ["Fondo de contingencia (10%)", "Imprevistos y reemplazos", "$4,200"],
+      ["Taller integración imanes", "Mano de obra costura especializada", "$1,200"],
+      ["Logística y distribución piloto", "Envíos, combustible, campo", "$2,000"],
+      ["Fondo de contingencia (10%)", "Imprevistos y reemplazos", "$1,725"],
     ],
-    foot: [["", "INVERSIÓN TOTAL", "$40,000 MXN"]],
+    foot: [["", "INVERSIÓN TOTAL", "$18,450 MXN"]],
     styles: { fontSize: 7.5, cellPadding: 3.5, textColor: [200,200,200], fillColor: [10,10,10] },
     headStyles: { fillColor: [155,89,182], textColor: [255,255,255], fontStyle: "bold" },
     footStyles: { fillColor: [155,89,182,0.1], textColor: [155,89,182], fontStyle: "bold", fontSize: 8 },
@@ -519,7 +519,7 @@ export async function generateProjectPDF() {
   setTxt(ORANGE); setFont("bold"); doc.setFontSize(8);
   doc.text("📈  Retorno de Inversión proyectado", 20, y + 8);
   setTxt(WHITE); setFont("normal"); doc.setFontSize(7.5);
-  doc.text("Con PVP de $500 MXN/kit y costo de producción de $300 MXN, el margen bruto es de $200 MXN (40%). Punto de equilibrio en 200 kits vendidos (~$100K MXN). Con 35 kits piloto el ingreso es $17,500 MXN.", 20, y + 16, { maxWidth: W - 36 });
+  doc.text("Con PVP de $300 MXN/kit y costo de producción de $195 MXN, el margen bruto es de $105 MXN (35%). Punto de equilibrio en 176 kits vendidos (~$52,800 MXN). Con 35 kits piloto el ingreso es $10,500 MXN.", 20, y + 16, { maxWidth: W - 36 });
 
   // ──────────────────────────────────────────────────────────────────────────────
   // PAGE 5 — ODS + IMPACTO SOCIAL
@@ -687,10 +687,10 @@ export async function generateProjectPDF() {
     startY: y,
     head: [["Canal", "Precio Venta", "Descuento", "Margen Bruto", "Notas"]],
     body: [
-      ["Venta directa B2C", "$500 MXN", "—", "40% ($200)", "Plataforma web + MercadoLibre"],
-      ["Empresa RSE / ESG (lote 50+)", "$420 MXN", "16%", "28% ($120)", "Incluye logo empresa en empaque"],
-      ["Municipio / Gobierno (lote 500+)", "$300 MXN", "40%", "0%", "Subsidiado — pérdida asumida por donativo"],
-      ["ONG Partner", "$200 MXN (costo)", "33%", "0%", "Precio de costo para distribución social"],
+      ["Venta directa B2C", "$300 MXN", "—", "35% ($105)", "Plataforma web + MercadoLibre"],
+      ["Empresa RSE / ESG (lote 50+)", "$260 MXN", "13%", "25% ($65)", "Incluye logo empresa en empaque"],
+      ["Municipio / Gobierno (lote 500+)", "$210 MXN", "30%", "7% ($15)", "Subsidiado — pérdida asumida por donativo"],
+      ["ONG Partner", "$195 MXN (costo)", "35%", "0%", "Precio de costo para distribución social"],
       ["Campaña Apadrina (B2C donativo)", "$50 MXN/mes", "—", "N/A", "Donante paga kit de un trabajador c/mes"],
     ],
     styles: { fontSize: 7, cellPadding: 3, textColor: [200,200,200], fillColor: [10,10,10] },
@@ -723,11 +723,12 @@ export async function generateProjectPDF() {
 
   y = sectionHeader("Resumen de Sostenibilidad Financiera", y);
   const sustData = [
-    { label: "Punto de equilibrio (unidades)", val: "182 kits" },
-    { label: "Punto de equilibrio (ingresos)", val: "$163,800 MXN" },
-    { label: "Margen bruto estándar (B2C)", val: "40% — $200 MXN/kit" },
-    { label: "Proyección ingresos año 1 (500 kits)", val: "$250,000 MXN bruto" },
-    { label: "Proyección ingresos año 2 (10,000 kits)", val: "$5,000,000 MXN bruto" },
+    { label: "Inversión total de arranque", val: "$18,450 MXN" },
+    { label: "Punto de equilibrio (unidades)", val: "176 kits" },
+    { label: "Punto de equilibrio (ingresos)", val: "$52,800 MXN" },
+    { label: "Margen bruto estándar (B2C)", val: "35% — $105 MXN/kit" },
+    { label: "Proyección ingresos año 1 (500 kits)", val: "$150,000 MXN bruto" },
+    { label: "Proyección ingresos año 2 (10,000 kits)", val: "$3,000,000 MXN bruto" },
     { label: "Reinversión en I+D (% sobre ventas)", val: "8% — mejora del sensor electromagnético" },
   ];
   setFill(DARK); doc.roundedRect(14, y, W - 28, sustData.length * 10 + 8, 3, 3, "F");

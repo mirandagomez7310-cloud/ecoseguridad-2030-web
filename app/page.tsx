@@ -935,20 +935,20 @@ function PlanSection() {
 function FinanzasSection() {
   const [ref, inView] = useReveal();
   const costos = [
-    { item: "Guante HPPE calibre 13 c/nitrilo (par)", proveedor: "Safety Pro MX", precio: "$180" },
-    { item: "4 imanes neodimio N52 D25mm (juego)", proveedor: "MagnetMX / MercadoLibre", precio: "$90" },
-    { item: "Costura/integración imanes al guante", proveedor: "Taller local", precio: "$50" },
-    { item: "Bastón detector portátil", proveedor: "TechField Mx", precio: "$280" },
-    { item: "Empaque, instructivo y marca", proveedor: "PackMex", precio: "$60" },
-    { item: "Control de calidad / pruebas", proveedor: "Interno", precio: "$20" },
+    { item: "Guante HPPE calibre 13 c/nitrilo (par)", proveedor: "Safety Pro MX (compra en volumen)", precio: "$70" },
+    { item: "4 imanes neodimio N52 D25mm (juego)", proveedor: "AliExpress / MagnetMX directo", precio: "$45" },
+    { item: "Costura/integración imanes al guante", proveedor: "Taller local", precio: "$25" },
+    { item: "Bastón detector básico portátil", proveedor: "TechField Mx / AliExpress", precio: "$35" },
+    { item: "Empaque, instructivo y marca", proveedor: "PackMex", precio: "$15" },
+    { item: "Control de calidad / pruebas", proveedor: "Interno", precio: "$5" },
   ];
   const inversion = [
-    { concepto: "Producción inicial (35 kits MagnetoRec)", monto: "$23,800" },
-    { concepto: "Diseño, branding e instructivos", monto: "$4,500" },
+    { concepto: "Producción inicial (35 kits MagnetoRec)", monto: "$6,825" },
+    { concepto: "Diseño, branding e instructivos", monto: "$3,500" },
     { concepto: "Registro de marca IMPI", monto: "$3,200" },
-    { concepto: "Taller de integración imanes (mano de obra)", monto: "$1,750" },
-    { concepto: "Logística y distribución piloto", monto: "$2,550" },
-    { concepto: "Fondo de contingencia", monto: "$4,200" },
+    { concepto: "Taller de integración imanes (mano de obra)", monto: "$1,200" },
+    { concepto: "Logística y distribución piloto", monto: "$2,000" },
+    { concepto: "Fondo de contingencia (10%)", monto: "$3,275" },
   ];
   return (
     <section id="finanzas" style={{ background: "#030303", padding: "120px 24px" }}>
