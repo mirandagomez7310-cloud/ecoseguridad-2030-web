@@ -129,7 +129,7 @@ export async function generateProjectPDF() {
 
     // Center text
     setTxt(WHITE); setFont("bold"); doc.setFontSize(8);
-    doc.text("$680", cx, cy - 1.5, { align: "center" });
+    doc.text("$300", cx, cy - 1.5, { align: "center" });
     setTxt(GRAY); setFont("normal"); doc.setFontSize(6);
     doc.text("MXN / kit", cx, cy + 4, { align: "center" });
 
@@ -198,7 +198,7 @@ export async function generateProjectPDF() {
 
   // Key stats boxes
   const stats = [
-    { val: "$680 MXN", label: "Costo por kit" },
+    { val: "$300 MXN", label: "Costo por kit" },
     { val: "2 M+", label: "Pepenadores en MX" },
     { val: "3×", label: "Velocidad de recolección" },
     { val: "EN 388", label: "Certificación" },
@@ -441,7 +441,7 @@ export async function generateProjectPDF() {
       ["Empaque + instructivo impreso", "Caja kraft + folleto A5 4 colores", "PackMex", "$60 MXN"],
       ["Control de calidad / pruebas", "Inspección magnética + funcional", "Interno", "$20 MXN"],
     ],
-    foot: [["", "", "TOTAL KIT MAGNETOREC", "$680 MXN"]],
+    foot: [["", "", "TOTAL KIT MAGNETOREC", "$300 MXN"]],
     styles: { fontSize: 7.5, cellPadding: 3.5, font: "helvetica", textColor: [200,200,200], fillColor: [10,10,10] },
     headStyles: { fillColor: [232,93,4], textColor: [255,255,255], fontStyle: "bold", fontSize: 7.5 },
     footStyles: { fillColor: [232,93,4,0.15], textColor: [232,93,4], fontStyle: "bold", fontSize: 8 },
@@ -519,7 +519,7 @@ export async function generateProjectPDF() {
   setTxt(ORANGE); setFont("bold"); doc.setFontSize(8);
   doc.text("📈  Retorno de Inversión proyectado", 20, y + 8);
   setTxt(WHITE); setFont("normal"); doc.setFontSize(7.5);
-  doc.text("Con PVP de $900 MXN/kit y costo de producción de $680 MXN, el margen bruto es de $220 MXN (32%). Punto de equilibrio en 182 kits vendidos (~$164K MXN). Con 35 kits piloto el ingreso es $31,500 MXN.", 20, y + 16, { maxWidth: W - 36 });
+  doc.text("Con PVP de $500 MXN/kit y costo de producción de $300 MXN, el margen bruto es de $200 MXN (40%). Punto de equilibrio en 200 kits vendidos (~$100K MXN). Con 35 kits piloto el ingreso es $17,500 MXN.", 20, y + 16, { maxWidth: W - 36 });
 
   // ──────────────────────────────────────────────────────────────────────────────
   // PAGE 5 — ODS + IMPACTO SOCIAL
@@ -545,8 +545,8 @@ export async function generateProjectPDF() {
     {
       num: "ODS 10", color: [155,89,182] as [number,number,number],
       title: "Reducción de las Desigualdades",
-      kpis: ["Precio accesible: $680 MXN (recuperable en 3 jornadas)", "Sin requisito de smartphone ni electricidad", "Distribuible a zonas sin infraestructura bancaria"],
-      body: "El kit fue diseñado para ser económicamente accesible al segmento más vulnerable. Con un precio de $680 MXN, equivale a menos de 6 días de trabajo al ingreso promedio actual del recolector. El modelo de distribución contempla subsidios por parte de empresas con programa de RSE y municipios, permitiendo que el kit llegue sin costo al trabajador en las fases iniciales.",
+      kpis: ["Precio accesible: $300 MXN (recuperable en 2 jornadas)", "Sin requisito de smartphone ni electricidad", "Distribuible a zonas sin infraestructura bancaria"],
+      body: "El kit fue diseñado para ser económicamente accesible al segmento más vulnerable. Con un precio de $300 MXN, equivale a menos de 3 días de trabajo al ingreso promedio actual del recolector. El modelo de distribución contempla subsidios por parte de empresas con programa de RSE y municipios, permitiendo que el kit llegue sin costo al trabajador en las fases iniciales.",
     },
     {
       num: "ODS 12", color: [39,174,96] as [number,number,number],
@@ -687,10 +687,10 @@ export async function generateProjectPDF() {
     startY: y,
     head: [["Canal", "Precio Venta", "Descuento", "Margen Bruto", "Notas"]],
     body: [
-      ["Venta directa B2C", "$900 MXN", "—", "32% ($220)", "Plataforma web + MercadoLibre"],
-      ["Empresa RSE / ESG (lote 50+)", "$750 MXN", "17%", "10% ($70)", "Incluye logo empresa en empaque"],
-      ["Municipio / Gobierno (lote 500+)", "$650 MXN", "28%", "-5%", "Subsidiado — pérdida asumida por donativo"],
-      ["ONG Partner", "$450 MXN (costo)", "33%", "0%", "Precio de costo para distribución social"],
+      ["Venta directa B2C", "$500 MXN", "—", "40% ($200)", "Plataforma web + MercadoLibre"],
+      ["Empresa RSE / ESG (lote 50+)", "$420 MXN", "16%", "28% ($120)", "Incluye logo empresa en empaque"],
+      ["Municipio / Gobierno (lote 500+)", "$300 MXN", "40%", "0%", "Subsidiado — pérdida asumida por donativo"],
+      ["ONG Partner", "$200 MXN (costo)", "33%", "0%", "Precio de costo para distribución social"],
       ["Campaña Apadrina (B2C donativo)", "$50 MXN/mes", "—", "N/A", "Donante paga kit de un trabajador c/mes"],
     ],
     styles: { fontSize: 7, cellPadding: 3, textColor: [200,200,200], fillColor: [10,10,10] },
@@ -725,9 +725,9 @@ export async function generateProjectPDF() {
   const sustData = [
     { label: "Punto de equilibrio (unidades)", val: "182 kits" },
     { label: "Punto de equilibrio (ingresos)", val: "$163,800 MXN" },
-    { label: "Margen bruto estándar (B2C)", val: "32% — $220 MXN/kit" },
-    { label: "Proyección ingresos año 1 (500 kits)", val: "$450,000 MXN bruto" },
-    { label: "Proyección ingresos año 2 (10,000 kits)", val: "$9,000,000 MXN bruto" },
+    { label: "Margen bruto estándar (B2C)", val: "40% — $200 MXN/kit" },
+    { label: "Proyección ingresos año 1 (500 kits)", val: "$250,000 MXN bruto" },
+    { label: "Proyección ingresos año 2 (10,000 kits)", val: "$5,000,000 MXN bruto" },
     { label: "Reinversión en I+D (% sobre ventas)", val: "8% — mejora del sensor electromagnético" },
   ];
   setFill(DARK); doc.roundedRect(14, y, W - 28, sustData.length * 10 + 8, 3, 3, "F");
@@ -753,7 +753,7 @@ export async function generateProjectPDF() {
 
   const conclusions = [
     { num: "01", text: "El Kit MagnetoRec es técnicamente viable: los materiales (HPPE, neodimio N52, sensor inductivo) existen en el mercado mexicano, son accesibles y ya han sido probados en condiciones reales de campo." },
-    { num: "02", text: "El costo de $680 MXN es recuperable en menos de 3 jornadas de trabajo con el incremento de productividad proyectado, lo que hace al kit autosustentable para el propio trabajador." },
+    { num: "02", text: "El costo de $300 MXN es recuperable en menos de 2 jornadas de trabajo con el incremento de productividad proyectado, lo que hace al kit autosustentable para el propio trabajador." },
     { num: "03", text: "El modelo de distribución mixto (B2C, B2B RSE, ONG, municipios) garantiza que el kit llegue a los distintos segmentos del mercado objetivo, con precios adaptados a cada canal." },
     { num: "04", text: "La alineación con ODS 8, 10 y 12 abre acceso a financiamiento internacional (BID, PNUD, Green Climate Fund) y hace al proyecto elegible para esquemas de impacto social con retorno." },
     { num: "05", text: "El potencial de escalabilidad es significativo: con 10,000 kits distribuidos en 2026 y 200,000 en 2030, el impacto sistémico en la economía circular de México sería medible y verificable." },

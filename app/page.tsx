@@ -418,7 +418,7 @@ function KitPackVisual() {
         <img src="/glove.png" alt="Guante" style={{ width: "100%", objectFit: "contain", filter: "drop-shadow(0 0 30px rgba(232,93,4,0.25))" }} />
       </div>
       <div style={{ gridColumn: "span 2", background: "#E85D0412", border: "1px solid #E85D0435", borderRadius: 16, padding: "16px 24px", textAlign: "center" }}>
-        <span style={{ color: "#E85D04", fontWeight: 900, fontSize: 18, letterSpacing: "-0.02em" }}>Kit MagnetoRec · $680 MXN</span>
+        <span style={{ color: "#E85D04", fontWeight: 900, fontSize: 18, letterSpacing: "-0.02em" }}>Kit MagnetoRec · $300 MXN</span>
         <div style={{ color: "#555", fontSize: 13, marginTop: 4 }}>Bastón Detector de Riesgos + Guante Magnético de Recolección N52</div>
       </div>
     </div>
@@ -597,7 +597,7 @@ function Hero() {
         >
           {[
             { val: 2000000, suffix: "+", label: "Pepenadores en México" },
-            { val: 680, prefix: "$", label: "MXN por kit" },
+            { val: 300, prefix: "$", label: "MXN por kit" },
             { val: 3, suffix: "×", label: "Más velocidad de recolección" },
             { val: 2030, label: "Meta de impacto" },
           ].map((s, i) => (
@@ -605,7 +605,7 @@ function Hero() {
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 + i * 0.1 }}
             >
               <div style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em" }}>
-                {i === 0 ? <AnimatedNumber target={2} suffix="M+" /> : i === 1 ? <AnimatedNumber target={680} prefix="$" /> : i === 2 ? <AnimatedNumber target={3} suffix="×" /> : "2030"}
+                {i === 0 ? <AnimatedNumber target={2} suffix="M+" /> : i === 1 ? <AnimatedNumber target={300} prefix="$" /> : i === 2 ? <AnimatedNumber target={3} suffix="×" /> : "2030"}
               </div>
               <div style={{ color: "#444", fontSize: 12, marginTop: 6, fontWeight: 500 }}>{s.label}</div>
             </motion.div>
@@ -645,7 +645,7 @@ function ODSSection() {
   const [active, setActive] = useState(0);
   const ods = [
     { num: "ODS 8", label: "Trabajo Decente y Crecimiento Económico", color: "#FF8C00", icon: Users, desc: "El Guante MagnetoRec reduce hasta 60% el esfuerzo físico en la recolección de metales: los pepenadores recogen más en menos tiempo, con menor fatiga y mayor ingreso por jornada.", items: ["Más kilogramos recolectados por hora", "Menos esfuerzo físico y lesiones de espalda", "Mayor ingreso económico por jornada"] },
-    { num: "ODS 10", label: "Reducción de las Desigualdades", color: "#9B59B6", icon: TrendingUp, desc: "Un pepenador sin herramientas gana en promedio $120 MXN/día. Con el kit MagnetoRec puede recolectar hasta 3 veces más material, acercándose a un ingreso digno sin cambiar de actividad.", items: ["Acceso a herramienta de bajo costo ($680 MXN)", "Aumento de ingreso sin capacitación previa", "Distribuible en zonas sin acceso bancario"] },
+    { num: "ODS 10", label: "Reducción de las Desigualdades", color: "#9B59B6", icon: TrendingUp, desc: "Un pepenador sin herramientas gana en promedio $120 MXN/día. Con el kit MagnetoRec puede recolectar hasta 3 veces más material, acercándose a un ingreso digno sin cambiar de actividad.", items: ["Acceso a herramienta de bajo costo ($300 MXN)", "Aumento de ingreso sin capacitación previa", "Distribuible en zonas sin acceso bancario"] },
     { num: "ODS 12", label: "Producción y Consumo Responsables", color: "#27AE60", icon: Recycle, desc: "Al recolectar más metal por jornada con el guante magnético, más material ferroso llega a plantas de reciclaje en lugar de vertederos. Cada kit activa directamente la economía circular.", items: ["Mayor recuperación de acero y hierro ferroso", "Menos metal en rellenos sanitarios", "Cadena de reciclaje más eficiente"] },
   ];
   const current = ods[active];
@@ -761,7 +761,7 @@ function SolucionSection() {
     ],
     [
       { title: "Kit MagnetoRec 2 en 1", desc: "Bastón Detector de Riesgos + Guante Magnético: cubren detección de peligros y recolección eficiente de metales en una solución." },
-      { title: "Costo total: $680 MXN", desc: "El pepenador recupera la inversión en menos de 3 jornadas con el aumento en volumen de material recolectado." },
+      { title: "Costo total: $300 MXN", desc: "El pepenador recupera la inversión en menos de 2 jornadas con el aumento en volumen de material recolectado." },
       { title: "Sin electricidad ni apps", desc: "El guante magnético no requiere batería ni smartphone. Funciona desde el primer uso en cualquier condición de campo." },
       { title: "Escalable a 2M+ trabajadores", desc: "Diseño simple y bajo costo permite distribución masiva: municipios, cooperativas y ONGs pueden adquirir lotes desde 35 kits." },
     ]
@@ -972,7 +972,7 @@ function FinanzasSection() {
                     <div style={{ color: "#fff", fontWeight: 800, fontSize: 17 }}>Costo por Kit</div>
                     <div style={{ color: "#333", fontSize: 12 }}>Desglose de producción</div>
                   </div>
-                  <motion.div whileHover={{ scale: 1.05 }} style={{ padding: "8px 16px", background: "#E85D0412", border: "1px solid #E85D0440", borderRadius: 8, color: "#E85D04", fontWeight: 800, fontSize: 18 }}>$680 MXN</motion.div>
+                  <motion.div whileHover={{ scale: 1.05 }} style={{ padding: "8px 16px", background: "#E85D0412", border: "1px solid #E85D0440", borderRadius: 8, color: "#E85D04", fontWeight: 800, fontSize: 18 }}>$300 MXN</motion.div>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 80px", gap: 8, paddingBottom: 12 }}>
                   {["Componente", "Proveedor", "Precio"].map(h => (
@@ -993,7 +993,7 @@ function FinanzasSection() {
                 ))}
                 <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 80px", gap: 8, padding: "18px 0", borderTop: "1px solid #111", marginTop: 4 }}>
                   <div style={{ gridColumn: "span 2", color: "#fff", fontWeight: 800, fontSize: 14, textTransform: "uppercase", letterSpacing: "0.06em" }}>Total Kit MagnetoRec</div>
-                  <div style={{ color: "#E85D04", fontWeight: 900, fontSize: 18 }}>$680</div>
+                  <div style={{ color: "#E85D04", fontWeight: 900, fontSize: 18 }}>$300</div>
                 </div>
               </div>
             </motion.div>
